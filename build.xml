@@ -2,9 +2,9 @@
 <project name="ant-debugger" basedir="." default="dist">
 
     <!--TODO: Find a more generic/conventional way to define the IDEA classpath-->
-    <property name="idea.home" value="C:/Program Files (x86)/JetBrains/IntelliJ IDEA 134.1342"/>
+    <property name="idea.home" value="C:\__Development\ide\IntelliJ IDEA Community Edition 2016.1"/>
 
-    <property name="build.version" value="1.3.0"/>
+    <property name="build.version" value="1.4.0"/>
 
     <tstamp>
        <format property="TODAY" pattern="yyyy-MM-dd HH:mm:ss" />
@@ -25,7 +25,7 @@
     </target>
 
     <target name="compile" depends="init">
-        <javac srcdir="${src.dir}" destdir="${build.classes.dir}" target="1.5">
+        <javac srcdir="${src.dir}" destdir="${build.classes.dir}" target="1.8">
             <classpath>
                 <fileset dir="${idea.home}/lib">
                     <include name="*.jar"/>
